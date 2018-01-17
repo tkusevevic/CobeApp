@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/parent_layout_receipt"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,25 +7,25 @@
 
     <TextView
         android:id="@+id/recieptsView"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="26dp"
         android:text="BEER"
-        android:textSize="18sp" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/priceView"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="26dp"
         android:text="150"
-        android:textSize="18sp" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="36dp"

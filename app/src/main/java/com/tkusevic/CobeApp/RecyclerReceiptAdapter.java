@@ -28,7 +28,7 @@ public class RecyclerReceiptAdapter extends RecyclerView.Adapter<RecyclerReceipt
         this.listener = listener;
     }
 
-    public void setReceipts(List<Recipe> receipts){
+    public void setReceipts(List<Recipe> receipts) {
         mReceipts.clear();
         mReceipts.addAll(receipts);
         notifyDataSetChanged();

@@ -20,6 +20,8 @@ import com.tkusevic.CobeApp.data.model.User;
 import com.tkusevic.CobeApp.ui.OnReceiptClickListener;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -108,13 +110,11 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
                     recipe.setSumPrice(Integer.parseInt(reciepePrice.getText().toString()));
                     recipe.setUserId(userId);
                     data.addReciepe(recipe);
-                    Toast.makeText(getApplicationContext(), data.getRecipes().toString(), Toast.LENGTH_LONG).show();
                     Toast.makeText(getApplicationContext(), "Racun uspješno naplacen!", Toast.LENGTH_SHORT).show();
                     reciepePrice.setText("0");
                     reciepeView.setText("");
                     recipe = new Recipe();
                     break;
-
                 case DialogInterface.BUTTON_NEGATIVE:
                     recipe = new Recipe();
                     Toast.makeText(getApplicationContext(), "Racun nije uspješno naplacen!", Toast.LENGTH_SHORT).show();
@@ -154,14 +154,13 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
 
     public void showRecepts(View view) {
         List<Recipe> items = new ArrayList<>();
-
         for (Recipe recipe : data.getRecipes()) {
             if (recipe != null && recipe.getUserId() == userId) {
                 items.add(recipe);
             }
         }
-
-        receiptAdapter. setReceipts(items);
+        Collections.reverse(items);
+        receiptAdapter.setReceipts(items);
         recipeFrameLayout.setVisibility(View.VISIBLE);
     }
 

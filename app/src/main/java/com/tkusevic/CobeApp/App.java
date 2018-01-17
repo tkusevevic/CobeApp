@@ -9,6 +9,7 @@ import android.app.Application;
 public class App extends Application {
 
     private static final Data data = new Data();
+
     public static Data getData() {
         return data;
     }

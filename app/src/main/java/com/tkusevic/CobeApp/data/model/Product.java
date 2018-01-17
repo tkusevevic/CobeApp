@@ -55,6 +55,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return (getId() + " " + getName() + " = " + getPrice() + " HRK");
+        return ( getName() + " = " + getPrice() + " HRK");
     }
 }

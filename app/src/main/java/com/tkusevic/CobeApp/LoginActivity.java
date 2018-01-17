@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
     public void newLogin(View view) {
         boolean isEmailOk = false;
         boolean isPasswordOk = false;
-        int id=-1;
+        int id = -1;
 
         for (User user : data.getUsers()) {
             if (user.getEmail().equals(inputEmail.getText().toString())) {
@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 isPasswordOk = false;
             }
-            if(isEmailOk && isPasswordOk){
+            if (isEmailOk && isPasswordOk) {
                 id = user.getId();
                 break;
             }

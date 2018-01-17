@@ -53,21 +53,19 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     public void newRegistration(View view) {
-        if(registrationCheck() && emailCheck()){
-            User user = new User((data.getUsers().size()),inputEmail.getText().toString(),inputName.getText().toString(), inputPassord.getText().toString());
+        if (registrationCheck() && emailCheck()) {
+            User user = new User((data.getUsers().size()), inputEmail.getText().toString(), inputName.getText().toString(), inputPassord.getText().toString());
             data.addUser(user);
-            Toast.makeText(this,"Uspješna registranica",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Uspješna registranica", Toast.LENGTH_SHORT).show();
             Intent myIntent = new Intent(this, LoginActivity.class);
             this.startActivity(myIntent);
         }
     }
 
     private boolean emailCheck() {
-        if(EmailCheckUtils.isValidEmail(inputEmail.getText().toString())){
+        if (EmailCheckUtils.isValidEmail(inputEmail.getText().toString())) {
             return true;
-        }
-        else
-        {
+        } else {
             Toast.makeText(this, "Invalid email!", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -77,32 +75,28 @@ public class RegistrationActivity extends AppCompatActivity {
         boolean nameOk, passwordOk, emailOk;
         if (!inputName.getText().toString().trim().isEmpty() && inputName.getText() != null) {
             nameLayout.setErrorEnabled(false);
-            nameOk=true;
-        }
-        else{
+            nameOk = true;
+        } else {
             nameLayout.setError("Empty name");
-            nameOk=false;
+            nameOk = false;
         }
-        if(!inputPassord.getText().toString().trim().isEmpty() && inputPassord.getText() != null){
+        if (!inputPassord.getText().toString().trim().isEmpty() && inputPassord.getText() != null) {
             passwordLayout.setErrorEnabled(false);
-            passwordOk=true;
-        }
-        else{
+            passwordOk = true;
+        } else {
             passwordLayout.setError("Empty password");
-            passwordOk=false;
+            passwordOk = false;
         }
-        if(!inputEmail.getText().toString().trim().isEmpty() && inputEmail.getText() != null) {
+        if (!inputEmail.getText().toString().trim().isEmpty() && inputEmail.getText() != null) {
             emailLayout.setErrorEnabled(false);
-            emailOk=true;
-        }
-        else{
+            emailOk = true;
+        } else {
             emailLayout.setError("Empty email");
-            emailOk=false;
+            emailOk = false;
         }
-        if(nameOk && emailOk && passwordOk){
+        if (nameOk && emailOk && passwordOk) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
