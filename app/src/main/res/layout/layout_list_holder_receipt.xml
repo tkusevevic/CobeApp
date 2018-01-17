@@ -8,6 +8,8 @@
 
     <TextView
         android:id="@+id/recieptsView"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -17,6 +19,8 @@
 
     <TextView
         android:id="@+id/priceView"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
