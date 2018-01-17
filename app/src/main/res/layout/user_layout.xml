@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tkusevic.CobeApp.UserActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/receipt"
+            android:onClick="showRecepts" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="115dp"
+            android:layout_marginRight="70dp"
+            android:text="iKafic"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/sign_out"
+            android:onClick="signOut" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/reciepeView"
+            android:background="@drawable/my_border" />
+
+        <Button
+            android:id="@+id/deleteAllBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/x_icon"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="deleteAllFromReciepe" />
+
+        <EditText
+            android:id="@+id/reciepeView"
+            android:layout_width="200dp"
+            android:layout_height="190dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/deleteAllBtn"
+            android:background="#FFFF"
+            android:editable="false"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/priceView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:editable="false"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/getReciepeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="getReciepe"
+            android:text="NAPLATI"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/reciepe_frame_layoutt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000010">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/closeRecipesView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="520dp"
+            android:background="@drawable/x_icon"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="closeRecipesView" />
+    </FrameLayout>
+</RelativeLayout>
