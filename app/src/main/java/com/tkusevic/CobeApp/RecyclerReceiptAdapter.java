@@ -65,7 +65,6 @@ public class RecyclerReceiptAdapter extends RecyclerView.Adapter<RecyclerReceipt
         TextView priceView;
         LinearLayout parentLayout;
 
-
         public ViewHolder(View itemView) {
             super(itemView);
             receiptView = itemView.findViewById(R.id.recieptsView);

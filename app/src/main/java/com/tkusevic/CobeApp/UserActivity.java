@@ -42,6 +42,8 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
     User globalUser;
 
 
+    private final RecyclerReceiptAdapter receiptAdapter = new RecyclerReceiptAdapter();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,7 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
         setUser();
         initUi();
         initRecyclerViewMain();
+        initRecyclerViewReceipe();
     }
 
     private void setUser() {
@@ -82,10 +85,9 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
     private void initRecyclerViewReceipe() {
         List<Recipe> actualRecipes = new ArrayList<>();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerViewReceipt);
-        RecyclerReceiptAdapter adapter = new RecyclerReceiptAdapter();
-        adapter.setOnReciepeClickListener(this);
-        adapter.setReceipts(actualRecipes);
-        recyclerView.setAdapter(adapter);
+        receiptAdapter.setOnReciepeClickListener(this);
+        receiptAdapter.setReceipts(actualRecipes);
+        recyclerView.setAdapter(receiptAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
@@ -131,9 +133,7 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
         Integer startPrice = Integer.valueOf(reciepePrice.getText().toString());
         Integer finalPrice = startPrice + product.getPrice();
         reciepePrice.setText(finalPrice.toString());
-
     }
-
 
     public void deleteAllFromReciepe(View view) {
         reciepeView.setText("");
@@ -153,7 +153,15 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
     }
 
     public void showRecepts(View view) {
-        initRecyclerViewReceipe();
+        List<Recipe> items = new ArrayList<>();
+
+        for (Recipe recipe : data.getRecipes()) {
+            if (recipe != null && recipe.getUserId() == userId) {
+                items.add(recipe);
+            }
+        }
+
+        receiptAdapter. setReceipts(items);
         recipeFrameLayout.setVisibility(View.VISIBLE);
     }
 
