@@ -89,7 +89,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginValidation(boolean isEmailOk, boolean isPasswordOk, int id,int loginType) {
-        Toast.makeText(this, " " + id + isEmailOk + isPasswordOk + loginType , Toast.LENGTH_SHORT).show();
         if (isEmailOk && isPasswordOk &&loginType == AppConstants.USER) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent myIntent = new Intent(this, UserActivity.class);

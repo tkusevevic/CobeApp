@@ -1,21 +1,24 @@
 package com.tkusevic.CobeApp.data.model;
 
 
-public class Product {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Product implements Serializable {
 
     private String name;
     private int price;
-    private int stockStatus;
     private int id;
     private int image;
 
 
 
-    public Product(int id, String name, int price, int stockStatus,int image) {
+    public Product(int id, String name, int price,int image) {
         this.name = name;
         this.id = id;
         this.price = price;
-        this.stockStatus = stockStatus;
         this.image = image;
     }
 
@@ -45,16 +48,10 @@ public class Product {
         this.price = price;
     }
 
-    public int getStockStatus() {
-        return stockStatus;
-    }
-
-    public void setStockStatus(int stockStatus) {
-        this.stockStatus = stockStatus;
-    }
-
     @Override
     public String toString() {
         return ( getName() + " = " + getPrice() + " HRK");
     }
+
+
 }

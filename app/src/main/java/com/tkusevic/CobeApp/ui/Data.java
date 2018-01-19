@@ -68,6 +68,4 @@ public class Data {
         return products;
     }
 
-
-    // TODO: 15.01.2018. write a CRUD
 }

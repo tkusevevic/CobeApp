@@ -27,19 +27,18 @@ public class DataUtils {
         users.add(new User(3, "user2@gmail.com", "user2", "password3"));
         data.addUsers(users);
 
-        products.add(new Product(1,"Pan",12,100, R.drawable.pan));
-        products.add(new Product(2,"Laško točeno",10,200,R.drawable.beer));
-
-        products.add(new Product(3,"Laško",10,30,R.drawable.lako));
-        products.add(new Product(4,"Ožujsko",12,100, R.drawable.ozujsko));
-        products.add(new Product(5,"Karlovačko",10,200,R.drawable.karlovacko));
-        products.add(new Product(6,"Coca cola",10,30,R.drawable.coca_cola));
-        products.add(new Product(7,"Capuccino",12,100, R.drawable.capucino));
-        products.add(new Product(8,"kava s mlijekom",10,200,R.drawable.coffe));
-        products.add(new Product(9,"Espresso",10,30,R.drawable.coffe));
-        products.add(new Product(10,"Coca cola",12,100, R.drawable.coca_cola));
-        products.add(new Product(11,"Fanta",11,200,R.drawable.fanta));
-        products.add(new Product(12,"Sprite",11,30,R.drawable.sprite));
+        products.add(new Product(1,"Pan",12,R.drawable.pan));
+        products.add(new Product(2,"Laško točeno",10,R.drawable.beer));
+        products.add(new Product(3,"Laško",10,R.drawable.lako));
+        products.add(new Product(4,"Ožujsko",12, R.drawable.ozujsko));
+        products.add(new Product(5,"Karlovačko",10,R.drawable.karlovacko));
+        products.add(new Product(6,"Coca cola",10,R.drawable.coca_cola));
+        products.add(new Product(7,"Capuccino",12, R.drawable.capucino));
+        products.add(new Product(8,"kava s mlijekom",10,R.drawable.coffe));
+        products.add(new Product(9,"Espresso",10,R.drawable.coffe));
+        products.add(new Product(10,"Coca cola",12, R.drawable.coca_cola));
+        products.add(new Product(11,"Fanta",11,R.drawable.fanta));
+        products.add(new Product(12,"Sprite",11,R.drawable.sprite));
         data.addProducts(products);
 
         workers.add(new Worker(1,1200,"mirko","mirkic","konobar","mirko@gmail.com","mirko123"));

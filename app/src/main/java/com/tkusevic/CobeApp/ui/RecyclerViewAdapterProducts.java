@@ -1,6 +1,9 @@
 package com.tkusevic.CobeApp.ui;
 
+import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPropertyAnimatorListener;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +21,9 @@ import java.util.List;
  * Created by tkusevic on 16.01.2018..
  */
 
-public class RecyclerViewAdapterProducts extends RecyclerView.Adapter<RecyclerViewAdapterProducts.ViewHolder> {
+public class RecyclerViewAdapterProducts extends RecyclerView.Adapter<RecyclerViewAdapterProducts.ViewHolder>  {
+
+    private final Data data = App.getData();
 
     private List<Product> mProducts = new ArrayList<>();
     private OnProductClickListener listener;
@@ -33,11 +38,18 @@ public class RecyclerViewAdapterProducts extends RecyclerView.Adapter<RecyclerVi
         notifyDataSetChanged();
     }
 
+    public void removeProduct(int position){
+        mProducts.remove(position);
+        notifyDataSetChanged();
+    }
+
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_holder_product, parent, false);
         return new ViewHolder(view);
     }
+
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
@@ -74,4 +86,8 @@ public class RecyclerViewAdapterProducts extends RecyclerView.Adapter<RecyclerVi
 
         }
     }
+
+
+
+
 }

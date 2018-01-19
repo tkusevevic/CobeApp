@@ -13,7 +13,10 @@ import com.tkusevic.CobeApp.common.utils.DataUtils;
  * Created by tkusevic on 18.01.2018..
  */
 
-public class WorkerActivity extends AppCompatActivity {
+public class WorkerActivity extends AppCompatActivity  {
+
+    FragmentClickable productClickable;
+
     private final Data data = App.getData();
 
     @Override
@@ -23,13 +26,10 @@ public class WorkerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_worker);
         NavigationPagerAdapter navigationPagerAdapter = new NavigationPagerAdapter(getSupportFragmentManager());
         navigationPagerAdapter.addFragment(new ProductFragment());
-        navigationPagerAdapter.addFragment(new RecipiesFragment());
         navigationPagerAdapter.addFragment(new WorkerFragment());
-        // TODO: 18.01.2018. add other fragments
+        navigationPagerAdapter.addFragment(new RecipiesFragment());
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(navigationPagerAdapter);
-
-
     }
 
     public void signOut(View view) {

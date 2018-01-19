@@ -1,7 +1,10 @@
 package com.tkusevic.CobeApp.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,14 +18,14 @@ import com.tkusevic.CobeApp.data.model.Product;
  * Created by tkusevic on 18.01.2018..
  */
 
-public class ProductFragment extends android.support.v4.app.Fragment implements OnProductClickListener{
+public class ProductFragment extends android.support.v4.app.Fragment implements OnProductClickListener, FragmentClickable {
 
     private final Data data = App.getData();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return  inflater.inflate(R.layout.fragment_holder_product, container, false);
+        return inflater.inflate(R.layout.fragment_holder_product, container, false);
     }
 
 
@@ -47,7 +50,14 @@ public class ProductFragment extends android.support.v4.app.Fragment implements 
 
     @Override
     public void onProductClick(Product product) {
-        //TO DO SOMETHING WITH SELECTED PRODUCT
+        Intent intent = new Intent(this.getContext(), ProductDetailsActivity.class);
+        intent.putExtra("object", product);
+        startActivity(intent);
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }
