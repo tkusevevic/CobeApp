@@ -1,4 +1,4 @@
-package com.tkusevic.CobeApp;
+package com.tkusevic.CobeApp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,11 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.tkusevic.CobeApp.R;
+import com.tkusevic.CobeApp.common.constants.AppConstants;
 import com.tkusevic.CobeApp.common.utils.DataUtils;
 import com.tkusevic.CobeApp.data.model.User;
+import com.tkusevic.CobeApp.data.model.Worker;
 
 /**
  * Created by tkusevic on 16.01.2018..
@@ -29,8 +32,10 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
-        DataUtils.loadData();
+        setContentView(R.layout.activity_login);
+        if(data.getWorkers().isEmpty()) {
+            DataUtils.loadData();
+        }
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         initUi();
     }
@@ -50,36 +55,55 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void newLogin(View view) {
+        boolean skipWorker = false;
+        int loginType=0;
         boolean isEmailOk = false;
         boolean isPasswordOk = false;
         int id = -1;
 
-        for (User user : data.getUsers()) {
-            if (user.getEmail().equals(inputEmail.getText().toString())) {
-                isEmailOk = true;
-            } else {
-                isEmailOk = false;
-            }
-            if (user.getPassword().equals(inputPassword.getText().toString())) {
-                isPasswordOk = true;
 
-            } else {
-                isPasswordOk = false;
-            }
+        for (User user : data.getUsers()) {
+            isEmailOk = user.getEmail().equals(inputEmail.getText().toString().trim());
+            isPasswordOk = user.getPassword().equals(inputPassword.getText().toString().trim());
             if (isEmailOk && isPasswordOk) {
+                skipWorker=true;
                 id = user.getId();
+                loginType= AppConstants.USER;
                 break;
             }
-        }
 
-        if (isEmailOk && isPasswordOk) {
+        }
+        if(!skipWorker) {
+            for (Worker worker : data.getWorkers()) {
+                isEmailOk = worker.getEmail().equals(inputEmail.getText().toString());
+                isPasswordOk = worker.getPassword().equals(inputPassword.getText().toString());
+                if (isEmailOk && isPasswordOk) {
+                    id = worker.getId();
+                    loginType = AppConstants.WORKER;
+                    break;
+                }
+
+            }
+        }
+        loginValidation(isEmailOk, isPasswordOk, id,loginType);
+    }
+
+    private void loginValidation(boolean isEmailOk, boolean isPasswordOk, int id,int loginType) {
+        Toast.makeText(this, " " + id + isEmailOk + isPasswordOk + loginType , Toast.LENGTH_SHORT).show();
+        if (isEmailOk && isPasswordOk &&loginType == AppConstants.USER) {
             Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent myIntent = new Intent(this, UserActivity.class);
             myIntent.putExtra("id", id);
             this.startActivity(myIntent);
-        } else {
+        }
+        else if(isEmailOk && isPasswordOk && loginType == AppConstants.WORKER){
+            Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
+            Intent myIntent = new Intent(this, WorkerActivity.class);
+            myIntent.putExtra("id", id);
+            this.startActivity(myIntent);
+        }
+        else {
             Toast.makeText(this, "Invalid input!", Toast.LENGTH_SHORT).show();
         }
-
     }
 }

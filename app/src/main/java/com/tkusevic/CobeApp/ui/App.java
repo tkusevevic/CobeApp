@@ -1,4 +1,4 @@
-package com.tkusevic.CobeApp;
+package com.tkusevic.CobeApp.ui;
 
 import android.app.Application;
 

@@ -1,7 +1,7 @@
 package com.tkusevic.CobeApp.common.utils;
 
-import com.tkusevic.CobeApp.App;
-import com.tkusevic.CobeApp.Data;
+import com.tkusevic.CobeApp.ui.App;
+import com.tkusevic.CobeApp.ui.Data;
 import com.tkusevic.CobeApp.data.model.User;
 
 import java.util.List;

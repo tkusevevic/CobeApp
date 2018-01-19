@@ -1,4 +1,4 @@
-package com.tkusevic.CobeApp;
+package com.tkusevic.CobeApp.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.data.model.Product;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.List;
  * Created by tkusevic on 16.01.2018..
  */
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapterProducts extends RecyclerView.Adapter<RecyclerViewAdapterProducts.ViewHolder> {
 
     private List<Product> mProducts = new ArrayList<>();
     private OnProductClickListener listener;
@@ -34,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_holder, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_holder_product, parent, false);
         return new ViewHolder(view);
     }
 
@@ -69,7 +70,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
             image = itemView.findViewById(R.id.image);
             name = itemView.findViewById(R.id.name);
-            parentLayout = itemView.findViewById(R.id.parent_layout_main);
+            parentLayout = itemView.findViewById(R.id.parent_layout_products);
 
         }
     }

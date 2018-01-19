@@ -1,4 +1,4 @@
-package com.tkusevic.CobeApp;
+package com.tkusevic.CobeApp.ui;
 
 import com.tkusevic.CobeApp.data.model.Product;
 

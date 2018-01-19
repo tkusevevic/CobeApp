@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">CobeApp</string>
+    <string name="naplati">NAPLATI</string>
 
-        <item name="visible" type="id"/>
-        <item name="masked" type="id"/>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="title_activity_worker">WorkerActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>

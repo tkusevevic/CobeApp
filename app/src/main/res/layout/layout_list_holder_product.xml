@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/parent_layout_main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout_products"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/my_border"
@@ -17,9 +18,8 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_margin="15dp"
         android:layout_marginTop="26dp"
-        android:text="BEER"
         android:textSize="22sp" />
 
 </LinearLayout>

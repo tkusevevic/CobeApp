@@ -1,4 +1,4 @@
-package com.tkusevic.CobeApp;
+package com.tkusevic.CobeApp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,10 +6,10 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.common.utils.EmailCheckUtils;
 import com.tkusevic.CobeApp.data.model.User;
 
@@ -21,7 +21,6 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText inputName;
     private EditText inputEmail;
     private EditText inputPassord;
-    private Button registration;
     private TextInputLayout passwordLayout;
     private TextInputLayout nameLayout;
     private TextInputLayout emailLayout;
@@ -31,7 +30,7 @@ public class RegistrationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registration_layout);
+        setContentView(R.layout.activity_registration);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         initUi();
     }
@@ -39,12 +38,10 @@ public class RegistrationActivity extends AppCompatActivity {
     private void initUi() {
         inputEmail = (EditText) findViewById(R.id.input_email);
         inputPassord = (EditText) findViewById(R.id.input_password);
-        registration = (Button) findViewById(R.id.btn_login);
         inputName = (EditText) findViewById(R.id.input_name);
         passwordLayout = (TextInputLayout) findViewById(R.id.input_password_layout_registration);
         nameLayout = (TextInputLayout) findViewById(R.id.input_name_layout_registration);
         emailLayout = (TextInputLayout) findViewById(R.id.input_email_layout_registration);
-
     }
 
     public void loginCall(View view) {
@@ -72,31 +69,43 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private boolean registrationCheck() {
-        boolean nameOk, passwordOk, emailOk;
-        if (!inputName.getText().toString().trim().isEmpty() && inputName.getText() != null) {
-            nameLayout.setErrorEnabled(false);
-            nameOk = true;
-        } else {
-            nameLayout.setError("Empty name");
-            nameOk = false;
-        }
-        if (!inputPassord.getText().toString().trim().isEmpty() && inputPassord.getText() != null) {
-            passwordLayout.setErrorEnabled(false);
-            passwordOk = true;
-        } else {
-            passwordLayout.setError("Empty password");
-            passwordOk = false;
-        }
-        if (!inputEmail.getText().toString().trim().isEmpty() && inputEmail.getText() != null) {
-            emailLayout.setErrorEnabled(false);
-            emailOk = true;
-        } else {
-            emailLayout.setError("Empty email");
-            emailOk = false;
-        }
-        if (nameOk && emailOk && passwordOk) {
+        boolean nameCheck=false ,passwordCheck=false, emailCheck=false;
+        nameCheck= InputNameCheck();
+        passwordCheck = InputPasswordCheck();
+        emailCheck = InputEmailCheck();
+        if (nameCheck && emailCheck && passwordCheck) {
             return true;
         } else {
+            return false;
+        }
+    }
+
+    private boolean InputNameCheck() {
+
+        if (!inputName.getText().toString().trim().isEmpty() && inputName.getText() != null) {
+            nameLayout.setErrorEnabled(false);
+           return true;
+        } else {
+            nameLayout.setError("Empty name");
+            return false;
+        }
+    }
+    private boolean InputPasswordCheck(){
+        if (!inputPassord.getText().toString().trim().isEmpty() && inputPassord.getText() != null) {
+            passwordLayout.setErrorEnabled(false);
+            return true;
+        } else {
+            passwordLayout.setError("Empty password");
+            return false;
+        }
+    }
+
+    private boolean InputEmailCheck(){
+        if (!inputEmail.getText().toString().trim().isEmpty() && inputEmail.getText() != null) {
+            emailLayout.setErrorEnabled(false);
+            return true;
+        } else {
+            emailLayout.setError("Empty email");
             return false;
         }
     }

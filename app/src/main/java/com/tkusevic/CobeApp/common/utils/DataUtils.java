@@ -1,7 +1,7 @@
 package com.tkusevic.CobeApp.common.utils;
 
-import com.tkusevic.CobeApp.App;
-import com.tkusevic.CobeApp.Data;
+import com.tkusevic.CobeApp.ui.App;
+import com.tkusevic.CobeApp.ui.Data;
 import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.data.model.Product;
 import com.tkusevic.CobeApp.data.model.User;
@@ -22,13 +22,14 @@ public class DataUtils {
         List<Product> products = new ArrayList<>();
         List<Worker> workers = new ArrayList<>();
 
-        users.add(new User(100, "test@gmail.com", "test", "test"));
-        users.add(new User(12, "user1@gmail.com", "user1", "password2"));
-        users.add(new User(5, "user2@gmail.com", "user2", "password3"));
+        users.add(new User(1, "test@gmail.com", "test", "test"));
+        users.add(new User(2, "user1@gmail.com", "user1", "password2"));
+        users.add(new User(3, "user2@gmail.com", "user2", "password3"));
         data.addUsers(users);
 
         products.add(new Product(1,"Pan",12,100, R.drawable.pan));
         products.add(new Product(2,"Laško točeno",10,200,R.drawable.beer));
+
         products.add(new Product(3,"Laško",10,30,R.drawable.lako));
         products.add(new Product(4,"Ožujsko",12,100, R.drawable.ozujsko));
         products.add(new Product(5,"Karlovačko",10,200,R.drawable.karlovacko));
@@ -41,9 +42,9 @@ public class DataUtils {
         products.add(new Product(12,"Sprite",11,30,R.drawable.sprite));
         data.addProducts(products);
 
-        workers.add(new Worker(21,1200,"mirko","mirkic","konobar","mirko@gmail.com","mirko123"));
-        workers.add(new Worker(31,3500,"Anka"," Pantic 0.5","konobar","anka@gmail.com","anka123"));
-        workers.add(new Worker(332,5000,"test","vlasnik","vlasnik","test@gmail.com","test"));
+        workers.add(new Worker(1,1200,"mirko","mirkic","konobar","mirko@gmail.com","mirko123"));
+        workers.add(new Worker(2,3500,"Anka"," Pantic","konobar","anka@gmail.com","anka123"));
+        workers.add(new Worker(3,5000,"test","vlasnik","vlasnik","test@test.com","test"));
         data.addWorkers(workers);
 
 

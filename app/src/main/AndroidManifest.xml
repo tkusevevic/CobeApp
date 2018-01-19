@@ -3,7 +3,7 @@
     package="com.tkusevic.CobeApp">
 
     <application
-        android:name="com.tkusevic.CobeApp.App"
+        android:name=".ui.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:label="LOGIN"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -21,13 +21,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.tkusevic.CobeApp.UserActivity"
+            android:name=".ui.WorkerActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.tkusevic.CobeApp.RegistrationActivity"
+            android:name=".ui.UserActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.RegistrationActivity"
             android:screenOrientation="portrait">
         </activity>
-
     </application>
+
 </manifest>

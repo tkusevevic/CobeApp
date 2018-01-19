@@ -13,6 +13,22 @@ public class Worker extends Person {
         this.lastName=lastName;
     }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public void setType(String type) {
         this.type = type;
     }

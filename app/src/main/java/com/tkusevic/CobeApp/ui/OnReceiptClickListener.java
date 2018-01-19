@@ -9,5 +9,5 @@ import com.tkusevic.CobeApp.data.model.Recipe;
 
 public interface OnReceiptClickListener {
 
-    void onReceiptClick(Recipe recipe);
+    void onRepeatClick(Recipe recipe);
 }
