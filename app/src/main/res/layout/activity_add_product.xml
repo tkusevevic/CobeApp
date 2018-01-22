@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/back"
+            android:onClick="goBack" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IME PROIZVODA"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/name_product_view_add"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CIJENA PROIZVODA"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/price_product_view_add"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/addProductBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="ADD"
+            android:onClick="addProduct"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</RelativeLayout>

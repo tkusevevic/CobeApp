@@ -6,7 +6,6 @@ import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.data.model.Product;
 import com.tkusevic.CobeApp.data.model.User;
 import com.tkusevic.CobeApp.data.model.Worker;
-
 import java.util.ArrayList;
 import java.util.List;
 

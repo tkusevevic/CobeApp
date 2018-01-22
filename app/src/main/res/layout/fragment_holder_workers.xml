@@ -7,21 +7,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="82dp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_height="25dp"
             android:layout_margin="3dp"
             android:textAlignment="center"
             android:text="IME"/>
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="92dp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_height="25dp"
             android:layout_margin="3dp"
             android:textAlignment="center"
+            android:text="PREZIME"/>
+        <TextView
+            android:layout_width="70dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_margin="3dp"
+            android:textAlignment="center"
             android:text="ULOGA"/>
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="70dp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_height="25dp"
             android:layout_margin="3dp"

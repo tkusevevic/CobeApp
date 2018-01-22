@@ -21,6 +21,9 @@ public class Product implements Serializable {
         this.price = price;
         this.image = image;
     }
+    public Product(){
+
+    }
 
     public void setId(int id) {this.id = id;}
 

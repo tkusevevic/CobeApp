@@ -1,6 +1,5 @@
 package com.tkusevic.CobeApp.ui;
 
-import com.tkusevic.CobeApp.data.model.Product;
 import com.tkusevic.CobeApp.data.model.Recipe;
 
 /**

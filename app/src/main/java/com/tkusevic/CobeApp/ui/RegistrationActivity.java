@@ -69,28 +69,25 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private boolean registrationCheck() {
-        boolean nameCheck=false ,passwordCheck=false, emailCheck=false;
-        nameCheck= InputNameCheck();
+        boolean nameCheck, passwordCheck, emailCheck;
+        nameCheck = InputNameCheck();
         passwordCheck = InputPasswordCheck();
         emailCheck = InputEmailCheck();
-        if (nameCheck && emailCheck && passwordCheck) {
-            return true;
-        } else {
-            return false;
-        }
+        return (nameCheck && emailCheck && passwordCheck);
     }
 
     private boolean InputNameCheck() {
 
         if (!inputName.getText().toString().trim().isEmpty() && inputName.getText() != null) {
             nameLayout.setErrorEnabled(false);
-           return true;
+            return true;
         } else {
             nameLayout.setError("Empty name");
             return false;
         }
     }
-    private boolean InputPasswordCheck(){
+
+    private boolean InputPasswordCheck() {
         if (!inputPassord.getText().toString().trim().isEmpty() && inputPassord.getText() != null) {
             passwordLayout.setErrorEnabled(false);
             return true;
@@ -100,7 +97,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
-    private boolean InputEmailCheck(){
+    private boolean InputEmailCheck() {
         if (!inputEmail.getText().toString().trim().isEmpty() && inputEmail.getText() != null) {
             emailLayout.setErrorEnabled(false);
             return true;

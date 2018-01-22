@@ -13,12 +13,10 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.data.model.Product;
 import com.tkusevic.CobeApp.data.model.Recipe;
 import com.tkusevic.CobeApp.data.model.User;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -111,7 +109,7 @@ public class UserActivity extends AppCompatActivity implements OnProductClickLis
                 .setNegativeButton("No", dialogClickListener).show();
     }
 
-    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+    public DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialog, int which) {
 

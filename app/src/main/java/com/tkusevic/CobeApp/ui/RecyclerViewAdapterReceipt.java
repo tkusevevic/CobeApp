@@ -22,7 +22,7 @@ public class RecyclerViewAdapterReceipt extends RecyclerView.Adapter<RecyclerVie
 
 
     private List<Recipe> mReceipts = new ArrayList<>();
-    OnReceiptClickListener listener;
+    private OnReceiptClickListener listener;
 
     public void setOnReciepeClickListener(OnReceiptClickListener listener) {
         this.listener = listener;
@@ -35,7 +35,7 @@ public class RecyclerViewAdapterReceipt extends RecyclerView.Adapter<RecyclerVie
         notifyDataSetChanged();
     }
 
-    public void addReceipt(Recipe recipe){
+    public void addReceipt(Recipe recipe) {
         mReceipts.add(recipe);
         notifyDataSetChanged();
     }

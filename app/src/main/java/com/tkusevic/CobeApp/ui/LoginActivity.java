@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.common.constants.AppConstants;
 import com.tkusevic.CobeApp.common.utils.DataUtils;
@@ -24,7 +23,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText inputEmail;
     EditText inputPassword;
     TextInputLayout emailLayout;
-
     TextInputLayout passwordLayout;
 
 
@@ -91,13 +89,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginValidation(boolean isEmailOk, boolean isPasswordOk, int id,int loginType) {
         if (isEmailOk && isPasswordOk &&loginType == AppConstants.USER) {
-            Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent myIntent = new Intent(this, UserActivity.class);
             myIntent.putExtra("id", id);
             this.startActivity(myIntent);
         }
         else if(isEmailOk && isPasswordOk && loginType == AppConstants.WORKER){
-            Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show();
             Intent myIntent = new Intent(this, WorkerActivity.class);
             myIntent.putExtra("id", id);
             this.startActivity(myIntent);

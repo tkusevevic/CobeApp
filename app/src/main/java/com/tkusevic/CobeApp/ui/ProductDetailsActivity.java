@@ -2,14 +2,10 @@ package com.tkusevic.CobeApp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
 import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.data.model.Product;
 
@@ -57,16 +53,17 @@ public class ProductDetailsActivity extends AppCompatActivity {
         finish();
     }
 
-    public void editProduct(View view) {
+    public void saveProduct(View view) {
         product.setName(nameProduct.getText().toString().trim());
         product.setPrice(Integer.parseInt(priceProduct.getText().toString().trim()));
-        for (Product currentProduct :data.getProducts()) {
-           if(currentProduct.getId() == product.getId()){
-               currentProduct.setName(product.getName());
-               currentProduct.setPrice(product.getPrice());
-               Intent intent = new Intent(this, WorkerActivity.class);
-               startActivity(intent);
-           }
+        for (Product currentProduct : data.getProducts()) {
+            if (currentProduct.getId() == product.getId()) {
+                currentProduct.setName(product.getName());
+                currentProduct.setPrice(product.getPrice());
+                Intent intent = new Intent(this, WorkerActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }
     }
 }

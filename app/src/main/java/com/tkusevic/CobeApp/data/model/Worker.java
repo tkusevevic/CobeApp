@@ -1,6 +1,8 @@
 package com.tkusevic.CobeApp.data.model;
 
-public class Worker extends Person {
+import java.io.Serializable;
+
+public class Worker extends Person implements Serializable {
 
     private double salary;
     private String type;
@@ -13,6 +15,10 @@ public class Worker extends Person {
         this.lastName=lastName;
     }
 
+
+    public Worker(){
+
+    }
     public double getSalary() {
         return salary;
     }
@@ -24,6 +30,7 @@ public class Worker extends Person {
     public String getLastName() {
         return lastName;
     }
+
 
     public void setLastName(String lastName) {
         this.lastName = lastName;

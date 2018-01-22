@@ -13,7 +13,7 @@
 
         <activity
             android:name=".ui.LoginActivity"
-            android:label="LOGIN"
+            android:label="CobeApp"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +34,15 @@
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".ui.ProductDetailsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.WorkerDetailsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.AddWorkerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.AddProductActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

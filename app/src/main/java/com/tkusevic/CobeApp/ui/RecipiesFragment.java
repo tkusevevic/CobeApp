@@ -7,8 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-
 import com.tkusevic.CobeApp.R;
 import com.tkusevic.CobeApp.data.model.Recipe;
 
@@ -21,13 +19,9 @@ public class RecipiesFragment extends android.support.v4.app.Fragment implements
 
     private final Data data = App.getData();
 
-    Button btn;
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_holder_recipes,container,false);
-
-
     }
 
     @Override
@@ -47,6 +41,6 @@ public class RecipiesFragment extends android.support.v4.app.Fragment implements
 
     @Override
     public void onRepeatClick(Recipe recipe) {
-
+        //NULL
     }
 }
