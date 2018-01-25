@@ -2,6 +2,8 @@ package com.tkusevic.CobeApp.ui;
 
 import android.app.Application;
 
+import com.tkusevic.CobeApp.data.database.Data;
+
 /**
  * Created by tkusevic on 15.01.2018..
  */

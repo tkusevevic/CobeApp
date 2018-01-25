@@ -5,10 +5,10 @@ import java.util.List;
 
 public class User extends Person {
 
-    List<Recipe> recipes = new ArrayList<>();
+    List<Bill> bills = new ArrayList<>();
 
-    public List<Recipe> getRecipes() {
-        return recipes;
+    public List<Bill> getBills() {
+        return bills;
     }
 
     public User(int id, String email, String name, String password) {
@@ -24,7 +24,7 @@ public class User extends Person {
         return String.format("%d %s %s %s \n" ,getId(),getName(), getEmail());
     }
 
-    public void addReciepe(Recipe reciepe){
-        recipes.add(reciepe);
+    public void addReciepe(Bill reciepe){
+        bills.add(reciepe);
     }
 }

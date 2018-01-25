@@ -11,51 +11,55 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:id="@+id/goBackProduct"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_margin="5dp"
-            android:background="@drawable/back"
-            android:onClick="goBack" />
+            android:background="@drawable/back" />
     </RelativeLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
-    <LinearLayout
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="IME PROIZVODA"
-            android:textColor="@color/colorPrimaryDark" />
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/name_product_view_add"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ime_proizvoda"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CIJENA PROIZVODA"
-            android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/name_product_view_add"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/price_product_view_add"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cijena_proizvoda"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <Button
-            android:id="@+id/addProductBtn"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="ADD"
-            android:onClick="addProduct"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/price_product_view_add"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/addProduct"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/dodaj"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

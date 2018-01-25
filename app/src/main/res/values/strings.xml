@@ -1,14 +1,54 @@
 <resources>
     <string name="app_name">CobeApp</string>
-    <string name="naplati">NAPLATI</string>
-
     <item name="visible" type="id" />
     <item name="masked" type="id" />
     <string name="title_activity_worker">WorkerActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="login">LOGIN</string>
+    <string name="no_account_text">No account yet? Create one!</string>
+    <string name="name">IME</string>
+    <string name="create_acc">Create Account</string>
+    <string name="already_member">Already a member? Login</string>
+
+    <string name="naplati">NAPLATI</string>
+    <string name="ime_proizvoda">IME PROIZVODA</string>
+    <string name="cijena_proizvoda">CIJENA PROIZVODA</string>
+    <string name="dodaj">DODAJ</string>
+    <string name="password">PASSWORD</string>
+    <string name="email">EMAIL</string>
+    <string name="placa_radnika">PLAĆA RADNIKA</string>
+    <string name="uloga_radnika">ULOGA RADNIKA</string>
+    <string name="prezime_radnika">PREZIME RADNIKA</string>
+    <string name="ime_radnika">IME RADNIKA</string>
+    <string name="ime_i_opis_proizvoda">IME I OPIS PROIZVODA</string>
+    <string name="spremi">SPREMI </string>
+    <string name="broj_nula_string">0</string>
+    <string name="valuta">HRK</string>
+    <string name="ime">IME</string>
+    <string name="prezime">PREZIME</string>
+    <string name="uloga">ULOGA</string>
+    <string name="obrisi">OBRIŠI</string>
+    <string name="proizvodi">PROIZVODI</string>
+    <string name="ukupna_cijena">UKUPNA CIJENA</string>
+    <string name="uspjesna_registracija">Uspješna registracija</string>
+    <string name="krivi_email">Nije dobar unos maila.</string>
+    <string name="prazno_ime">Prazno ime</string>
+    <string name="prazan_email">Prazan email</string>
+    <string name="prazan_password">Prazan passowrd</string>
+    <string name="krivi_unos_parametara">Krivi unos parametara</string>
+    <string name="racun_nije_naplacen">Racun nije uspješno naplacen!</string>
+    <string name="racun_naplacen">Racun uspješno naplacen!</string>
+    <string name="jeste_li_sigurni">Jeste li sigurni?</string>
+    <string name="uzmate_li_novu_rundu">Uzimate li novu rundu?</string>
+    <string name="iznosi">Iznosi: </string>
+    <string name="jeste_li_sigurni_format_1">Jeste li sigurni da zelite obrisati %s?</string>
+    <string name="jeste_li_sigurni_format_2">Jeste li sigurni da zelite obrisati %1$s %2$s?</string>
+    <string name="vas_racun_izgleda_format">Vas racun izgleda:\n %s. Iznosi %d. Zelite li ga naplatiti?</string>
+    <string name="da">Da</string>
+    <string name="ne">Ne</string>
+    <string name="aler_dialog_bill_format">Vas racun izgleda: %s \nIznosi: %s. \nZelite li novu rundu?</string>
+    <string name="krivi_unos_cijene">Krivi unos cijene</string>
 
 </resources>

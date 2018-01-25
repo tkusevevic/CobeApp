@@ -12,37 +12,39 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:label="CobeApp"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.WorkerActivity"
+            android:name=".ui.worker.WorkerActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.UserActivity"
+            android:name=".ui.user.UserActivity"
             android:screenOrientation="portrait">
 
         </activity>
         <activity
-            android:name=".ui.RegistrationActivity"
+            android:name=".ui.register.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".ui.product_details.ProductDetailsActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.ProductDetailsActivity"
+        <activity android:name=".ui.worker_details.WorkerDetailsActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.WorkerDetailsActivity"
+        <activity android:name=".ui.add_worker.AddWorkerActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ui.AddWorkerActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".ui.AddProductActivity"
+        <activity android:name=".ui.add_product.AddProductActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

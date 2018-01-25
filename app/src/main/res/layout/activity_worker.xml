@@ -13,12 +13,14 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/signOut"
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_margin="5dp"
-            android:background="@drawable/sign_out"
-            android:onClick="signOut" />
+            android:background="@drawable/sign_out" />
+
     </RelativeLayout>
 
     <android.support.v4.view.ViewPager
@@ -32,8 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="#000000"
-            app:tabSelectedTextColor="#E50000"
-            app:tabTextColor="#FFFFFF" />
+            android:background="@color/black"
+            app:tabSelectedTextColor="@color/red"
+            app:tabTextColor="@color/white" />
     </android.support.v4.view.ViewPager>
 </RelativeLayout>

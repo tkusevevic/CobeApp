@@ -12,82 +12,87 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/goBackWorkerDetails"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_margin="5dp"
-            android:background="@drawable/back"
-            android:onClick="goBack" />
+            android:background="@drawable/back" />
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="IME RADNIKA"
-            android:textColor="@color/colorPrimaryDark" />
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/name_worker_view"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/ime_radnika"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="PREZIME RADNIKA"
-            android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/name_worker_view"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
 
-        <EditText
-            android:id="@+id/lastname_worker_view"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/prezime_radnika"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="ULOGA RADNIKA"
-            android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/lastname_worker_view"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
 
-        <EditText
-            android:id="@+id/type_worker_view"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/uloga_radnika"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="PLAĆA RADNIKA"
-            android:textColor="@color/colorPrimaryDark" />
+            <EditText
+                android:id="@+id/type_worker_view"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
 
-        <EditText
-            android:id="@+id/salary_worker_view"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/placa_radnika"
+                android:textColor="@color/colorPrimaryDark" />
 
-        <Button
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="saveWorker"
-            android:text="SAVE"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/salary_worker_view"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
 
+            <Button
+                android:id="@+id/saveWorker"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/spremi"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
